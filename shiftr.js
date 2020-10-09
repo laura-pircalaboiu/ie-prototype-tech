@@ -6,7 +6,6 @@ client.on('connect', function(){
   console.log('client has connected!');
 
   client.subscribe('/hello');
-  // client.unsubscribe('/example');
 });
 
 client.on('message', function(topic, message) {
@@ -14,5 +13,10 @@ client.on('message', function(topic, message) {
 });
 
 function sendEmotion(emotion){
+    Swal.fire({
+      title: 'Emotion registered',
+      icon: 'success',
+      text: 'Have a lovely day'
+    })
     client.publish('/hello', emotion)
 }
