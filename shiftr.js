@@ -18,5 +18,9 @@ function sendEmotion(emotion){
       icon: 'success',
       text: 'Have a lovely day'
     })
+    if(emotion === "happy"){
+      document.getElementById('body').style.backgroundColor = "#faad1e"
+    }
+    
     client.publish('/hello', emotion)
 }
