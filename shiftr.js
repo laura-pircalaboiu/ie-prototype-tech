@@ -21,6 +21,10 @@ function sendEmotion(emotion){
     if(emotion === "happy"){
       document.getElementById('body').style.backgroundColor = "#faad1e"
     }
+    if(emotion === "angry"){
+      document.getElementById('body').style.backgroundColor = "#d9040b"
+    }
+
     
     client.publish('/hello', emotion)
 }
