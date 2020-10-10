@@ -27,9 +27,10 @@ function sendEmotion(emotion){
     if(emotion === "anxiety"){
       document.getElementById('body').style.backgroundColor = "#018c06"
     }
-    if(emotion === "crying"){
-      document.getElementById('body').style.backgroundColor = "#018c06"
+    if(emotion === "anxiety"){
+      document.getElementById('body').style.backgroundColor = "#2aace8"
     }
+
 
     
     client.publish('/hello', emotion)
